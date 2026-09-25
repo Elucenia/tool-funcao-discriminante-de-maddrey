@@ -1,0 +1,66 @@
+[
+  {
+    "label": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "raw": {
+        "df": 18.8
+      },
+      "main": "18,8",
+      "level": "low",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": 5
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+    "input": {
+      "tp": 17,
+      "tpc": 12,
+      "bili": 9
+    },
+    "expected": {
+      "raw": {
+        "df": 32
+      },
+      "level": "high",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "tp": 17,
+      "tpc": 12,
+      "bili": 9
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+    "input": {
+      "tp": 25,
+      "tpc": 12,
+      "bili": 10
+    },
+    "expected": {
+      "raw": {
+        "df": 69.8
+      },
+      "level": "high",
+      "tol": 0.001
+    },
+    "originalInput": {
+      "tp": 25,
+      "tpc": 12,
+      "bili": 10
+    },
+    "expandedZeroOptions": []
+  }
+]

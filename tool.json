@@ -1,0 +1,168 @@
+{
+  "tool": {
+    "id": "funcao-discriminante-de-maddrey",
+    "title": "Função discriminante de Maddrey",
+    "short": "Gravidade da hepatite alcoólica e corticoide",
+    "desc": "Calcule a função discriminante de Maddrey na hepatite alcoólica: valor ≥ 32 indica doença grave, com alta mortalidade e indicação de avaliar corticoide.",
+    "lead": "Estima a gravidade da hepatite alcoólica a partir do tempo de protrombina e da bilirrubina. Valores ≥ 32 identificam os pacientes com alta mortalidade em curto prazo, candidatos a corticoide.",
+    "spec": [
+      "gastroenterologia",
+      "clinica-medica",
+      "medicina-intensiva"
+    ],
+    "fields": [
+      [
+        "tp",
+        "Tempo de protrombina do paciente",
+        "num",
+        {
+          "min": 5,
+          "max": 150,
+          "step": 0.1,
+          "unit": "s",
+          "ph": "20"
+        }
+      ],
+      [
+        "tpc",
+        "Tempo de protrombina controle",
+        "num",
+        {
+          "min": 5,
+          "max": 30,
+          "step": 0.1,
+          "unit": "s",
+          "ph": "12"
+        }
+      ],
+      [
+        "bili",
+        "Bilirrubina total",
+        "num",
+        {
+          "min": 0.1,
+          "max": 80,
+          "step": 0.1,
+          "unit": "mg/dL",
+          "ph": "8"
+        }
+      ]
+    ],
+    "formula": "<p>FD = 4,6 × (TP do paciente − TP controle, em segundos) + bilirrubina total (mg/dL).</p>",
+    "table": [
+      [
+        "FD",
+        "Interpretação"
+      ],
+      [
+        "&lt; 32",
+        "Hepatite alcoólica não grave por este critério"
+      ],
+      [
+        "≥ 32",
+        "Hepatite alcoólica grave: alta mortalidade em 1 mês; avaliar prednisolona"
+      ]
+    ],
+    "tips": [
+      "Antes do corticoide, afaste infecção ativa, sangramento digestivo, insuficiência renal aguda e pancreatite; rastreie infecção (hemoculturas, urina, líquido ascítico).",
+      "Reavalie a resposta no 7º dia pelo escore de Lille: não respondedores não se beneficiam de manter o corticoide.",
+      "Use o TP em segundos (não o INR nem a atividade em %); o resultado depende do reagente do laboratório.",
+      "O MELD &gt; 20 também identifica hepatite alcoólica grave e é preferido por várias diretrizes.",
+      "A abstinência alcoólica é o principal determinante da sobrevida a longo prazo, qualquer que seja o escore."
+    ],
+    "sources": [
+      [
+        "Maddrey WC et al. Corticosteroid therapy of alcoholic hepatitis. Gastroenterology, 1978.",
+        "https://doi.org/10.1016/0016-5085(78)90401-8"
+      ],
+      [
+        "Carithers RL et al. Methylprednisolone therapy in patients with severe alcoholic hepatitis: a randomized multicenter trial. Ann Intern Med, 1989.",
+        "https://doi.org/10.7326/0003-4819-110-9-685"
+      ],
+      [
+        "Crabb DW et al. Diagnosis and treatment of alcohol-associated liver diseases: 2019 practice guidance from the American Association for the Study of Liver Diseases. Hepatology, 2020.",
+        "https://doi.org/10.1002/hep.30866"
+      ]
+    ],
+    "cases": [
+      [
+        "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        {
+          "tp": 15,
+          "tpc": 12,
+          "bili": 5
+        },
+        {
+          "raw": {
+            "df": 18.8
+          },
+          "main": "18,8",
+          "level": "low",
+          "tol": 0.001
+        }
+      ],
+      [
+        "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        {
+          "tp": 17,
+          "tpc": 12,
+          "bili": 9
+        },
+        {
+          "raw": {
+            "df": 32
+          },
+          "level": "high",
+          "tol": 0.001
+        }
+      ],
+      [
+        "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        {
+          "tp": 25,
+          "tpc": 12,
+          "bili": 10
+        },
+        {
+          "raw": {
+            "df": 69.8
+          },
+          "level": "high",
+          "tol": 0.001
+        }
+      ]
+    ],
+    "batch": "renal-digestivo",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "renal-digestivo",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/renal-digestivo.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/renal-digestivo.php",
+    "sha256": "95087d729438637d36e1a49af04d8de0fe1d9f7876443084443906a9281ef107",
+    "bytes": 109421
+  },
+  "clinicalValidation": "not-performed"
+}
