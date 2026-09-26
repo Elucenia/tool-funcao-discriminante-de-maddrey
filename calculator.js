@@ -1,11 +1,11 @@
-/* tool-funcao-discriminante-de-maddrey · Elucenia · https://github.com/Elucenia/tool-funcao-discriminante-de-maddrey
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-funcao-discriminante-de-maddrey · ELUCENIA · https://github.com/Elucenia/tool-funcao-discriminante-de-maddrey
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"funcao-discriminante-de-maddrey","title":"Função discriminante de Maddrey","fields":[["tp","Tempo de protrombina do paciente","num",{"min":5,"max":150,"step":0.1,"unit":"s","ph":"20"}],["tpc","Tempo de protrombina controle","num",{"min":5,"max":30,"step":0.1,"unit":"s","ph":"12"}],["bili","Bilirrubina total","num",{"min":0.1,"max":80,"step":0.1,"unit":"mg/dL","ph":"8"}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};

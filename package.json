@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-funcao-discriminante-de-maddrey",
   "version": "0.1.0",
-  "description": "Função discriminante de Maddrey · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "Função discriminante de Maddrey · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
