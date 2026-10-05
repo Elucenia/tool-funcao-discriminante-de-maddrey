@@ -1,6 +1,14 @@
 [
   {
-    "label": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+    "id": "funcao-discriminante-de-maddrey",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+    "originalInput": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": 5
+    },
     "input": {
       "tp": 15,
       "tpc": 12,
@@ -14,15 +22,35 @@
       "level": "low",
       "tol": 0.001
     },
-    "originalInput": {
-      "tp": 15,
-      "tpc": 12,
-      "bili": 5
+    "recordedResult": {
+      "main": [
+        "18,8",
+        ""
+      ],
+      "label": "Função discriminante de Maddrey",
+      "raw": {
+        "df": 18.8
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+    "id": "funcao-discriminante-de-maddrey",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+    "originalInput": {
+      "tp": 17,
+      "tpc": 12,
+      "bili": 9
+    },
     "input": {
       "tp": 17,
       "tpc": 12,
@@ -35,15 +63,35 @@
       "level": "high",
       "tol": 0.001
     },
-    "originalInput": {
-      "tp": 17,
-      "tpc": 12,
-      "bili": 9
+    "recordedResult": {
+      "main": [
+        "32,0",
+        ""
+      ],
+      "label": "Função discriminante de Maddrey",
+      "raw": {
+        "df": 32
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+    "id": "funcao-discriminante-de-maddrey",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+    "originalInput": {
+      "tp": 25,
+      "tpc": 12,
+      "bili": 10
+    },
     "input": {
       "tp": 25,
       "tpc": 12,
@@ -56,11 +104,23 @@
       "level": "high",
       "tol": 0.001
     },
-    "originalInput": {
-      "tp": 25,
-      "tpc": 12,
-      "bili": 10
+    "recordedResult": {
+      "main": [
+        "69,8",
+        ""
+      ],
+      "label": "Função discriminante de Maddrey",
+      "raw": {
+        "df": 69.8
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

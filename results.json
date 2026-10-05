@@ -1,0 +1,269 @@
+{
+  "id": "funcao-discriminante-de-maddrey",
+  "at": "2026-10-05T17:29:36.307Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/funcao-discriminante-de-maddrey/calculator.js",
+    "bytes": 4889,
+    "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+  },
+  "cases": [
+    {
+      "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+      "input": {
+        "tp": 15,
+        "tpc": 12,
+        "bili": 5
+      },
+      "obtained": {
+        "id": "funcao-discriminante-de-maddrey",
+        "main": [
+          "18,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 18.8
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "18,8",
+          "obtained": "18,8",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.df",
+          "expected": 18.8,
+          "obtained": 18.8,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.df",
+          "expected": 18.8,
+          "obtained": 18.8,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "18,8",
+          "obtained": "18,8",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+      "input": {
+        "tp": 17,
+        "tpc": 12,
+        "bili": 9
+      },
+      "obtained": {
+        "id": "funcao-discriminante-de-maddrey",
+        "main": [
+          "32,0",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 32
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.df",
+          "expected": 32,
+          "obtained": 32,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.df",
+          "expected": 32,
+          "obtained": 32,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "32,0",
+          "obtained": "32,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+      "input": {
+        "tp": 25,
+        "tpc": 12,
+        "bili": 10
+      },
+      "obtained": {
+        "id": "funcao-discriminante-de-maddrey",
+        "main": [
+          "69,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 69.8
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.df",
+          "expected": 69.8,
+          "obtained": 69.8,
+          "tolerance": 0.001,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.df",
+          "expected": 69.8,
+          "obtained": 69.8,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "69,8",
+          "obtained": "69,8",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "",
+          "obtained": "",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 34,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

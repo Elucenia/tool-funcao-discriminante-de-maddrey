@@ -1,0 +1,425 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field tp",
+    "input": {
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field tp",
+    "input": {
+      "tp": "",
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" tp",
+    "input": {
+      "tp": "NaN",
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" tp",
+    "input": {
+      "tp": "Infinity",
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" tp",
+    "input": {
+      "tp": "1e309",
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" tp",
+    "input": {
+      "tp": "invalid",
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} tp",
+    "input": {
+      "tp": {},
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true tp",
+    "input": {
+      "tp": true,
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum tp",
+    "input": {
+      "tp": 4,
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum tp",
+    "input": {
+      "tp": 165,
+      "tpc": 12,
+      "bili": 5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "tp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field tpc",
+    "input": {
+      "tp": 15,
+      "bili": 5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field tpc",
+    "input": {
+      "tp": 15,
+      "tpc": "",
+      "bili": 5
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" tpc",
+    "input": {
+      "tp": 15,
+      "tpc": "NaN",
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" tpc",
+    "input": {
+      "tp": 15,
+      "tpc": "Infinity",
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" tpc",
+    "input": {
+      "tp": 15,
+      "tpc": "1e309",
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" tpc",
+    "input": {
+      "tp": 15,
+      "tpc": "invalid",
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} tpc",
+    "input": {
+      "tp": 15,
+      "tpc": {},
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true tpc",
+    "input": {
+      "tp": 15,
+      "tpc": true,
+      "bili": 5
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum tpc",
+    "input": {
+      "tp": 15,
+      "tpc": 4,
+      "bili": 5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum tpc",
+    "input": {
+      "tp": 15,
+      "tpc": 33,
+      "bili": 5
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "tpc"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": -0.9
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum bili",
+    "input": {
+      "tp": 15,
+      "tpc": 12,
+      "bili": 88
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "bili"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

@@ -5,6 +5,7 @@
     "short": "Gravidade da hepatite alcoólica e corticoide",
     "desc": "Calcule a função discriminante de Maddrey na hepatite alcoólica: valor ≥ 32 indica doença grave, com alta mortalidade e indicação de avaliar corticoide.",
     "lead": "Estima a gravidade da hepatite alcoólica a partir do tempo de protrombina e da bilirrubina. Valores ≥ 32 identificam os pacientes com alta mortalidade em curto prazo, candidatos a corticoide.",
+    "kind": "Calculadora",
     "spec": [
       "gastroenterologia",
       "clinica-medica",
@@ -49,27 +50,6 @@
       ]
     ],
     "formula": "<p>FD = 4,6 × (TP do paciente − TP controle, em segundos) + bilirrubina total (mg/dL).</p>",
-    "table": [
-      [
-        "FD",
-        "Interpretação"
-      ],
-      [
-        "&lt; 32",
-        "Hepatite alcoólica não grave por este critério"
-      ],
-      [
-        "≥ 32",
-        "Hepatite alcoólica grave: alta mortalidade em 1 mês; avaliar prednisolona"
-      ]
-    ],
-    "tips": [
-      "Antes do corticoide, afaste infecção ativa, sangramento digestivo, insuficiência renal aguda e pancreatite; rastreie infecção (hemoculturas, urina, líquido ascítico).",
-      "Reavalie a resposta no 7º dia pelo escore de Lille: não respondedores não se beneficiam de manter o corticoide.",
-      "Use o TP em segundos (não o INR nem a atividade em %); o resultado depende do reagente do laboratório.",
-      "O MELD &gt; 20 também identifica hepatite alcoólica grave e é preferido por várias diretrizes.",
-      "A abstinência alcoólica é o principal determinante da sobrevida a longo prazo, qualquer que seja o escore."
-    ],
     "sources": [
       [
         "Maddrey WC et al. Corticosteroid therapy of alcoholic hepatitis. Gastroenterology, 1978.",
@@ -132,9 +112,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -143,17 +120,207 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T13:19:19.748Z",
+      "total": 378,
+      "passed": 378,
+      "evidencePath": "reports/review-20261003/four-physiological-equation-source-oracles-final23-v2.json",
+      "evidenceSha256": "519318646a8992c38bc190eab888a1a985682928e8dd2f833d6566be5e490b68",
+      "peerEvidencePath": "reports/review-20261003/independent-four-physiological-equation-source-oracles-final23-v2.json",
+      "peerEvidenceSha256": "59b71a2c62afcb302b5af74ea6bcd987dc816ed6b204fba5ecf377dd776f9fc2",
+      "scope": "Only explicitly listed physical/linear equation outputs. Other equations,protocols,thresholds,clinical interpretation,population suitability,professional translations and source rights are not approved.",
+      "source": {
+        "url": "https://www.aasld.org/liver-fellow-network/core-series/why-series/why-do-we-use-steroids-maddreys-discriminant-function",
+        "edition": "AASLD institutional method explanation, explicitly modified1989 Maddrey/Carithers variant",
+        "locator": "How was Maddrey’s Discriminant Function developed; paragraph on1989 modification",
+        "access": "Direct official institutional explanation read2026-10-04. Formula4.6(patientPT-controlPT)+serum bilirubin distinguishes modified1989 from original1978 absolutePT formula. Original1978/1989 fullpapers not newly read.",
+        "limitations": "Check only stated linear formula with same seconds andmg/dL. No steroid eligibility,threshold32,encephalopathy,prognosis or clinical population approval."
+      },
+      "implementations": [
+        {
+          "app": "website",
+          "id": "funcao-discriminante-de-maddrey",
+          "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+        },
+        {
+          "app": "dashboard",
+          "id": "funcao-discriminante-de-maddrey",
+          "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+        },
+        {
+          "app": "command-center",
+          "id": "funcao-discriminante-de-maddrey",
+          "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+        }
+      ],
+      "qualifications": [
+        "Check only stated linear formula with same seconds andmg/dL. No steroid eligibility,threshold32,encephalopathy,prognosis or clinical population approval."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Modified Maddrey/Carithers 1989:4,6×(TPpaciente−TPcontrole)+bilirrubina; sem equação original TPabsoluto 1978",
+    "implementationVersion": "funcao-discriminante-de-maddrey@native-2026-10-03+7eda95d4925b",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/352788/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "FD = 4,6 × (TP do paciente − TP controle, em segundos) + bilirrubina total (mg/dL).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "tp",
+            "label": "Tempo de protrombina do paciente",
+            "type": "num",
+            "min": 5,
+            "max": 150,
+            "unit": "s",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "tpc",
+            "label": "Tempo de protrombina controle",
+            "type": "num",
+            "min": 5,
+            "max": 30,
+            "unit": "s",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "bili",
+            "label": "Bilirrubina total",
+            "type": "num",
+            "min": 0.1,
+            "max": 80,
+            "unit": "mg/dL",
+            "optional": false,
+            "options": null
+          }
+        ],
+        "hash": "a4cb705411a29287fc52cb0d5e4e43c7d623d10735baaea2e705939aa6b52c8c"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Maddrey WC et al. Corticosteroid therapy of alcoholic hepatitis. Gastroenterology, 1978.",
+          "url": "https://doi.org/10.1016/0016-5085(78)90401-8",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Corticosteroid therapy of alcoholic hepatitis.",
+            "year": "1978",
+            "firstPublicationDate": "1978-08-01",
+            "doi": "10.1016/0016-5085(78)90401-8",
+            "pmid": "352788",
+            "journal": "Gastroenterology",
+            "authors": "Maddrey WC, Boitnott JK, Bedine MS, Weber FL, Mezey E, White RI."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/352788/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "e0f2c7152c6fec1cd0ccba5d778b90e90a3e43a17775639e8b5b47239fc924f1",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Carithers RL et al. Methylprednisolone therapy in patients with severe alcoholic hepatitis: a randomized multicenter trial. Ann Intern Med, 1989.",
+          "url": "https://doi.org/10.7326/0003-4819-110-9-685",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Methylprednisolone therapy in patients with severe alcoholic hepatitis. A randomized multicenter trial.",
+            "year": "1989",
+            "firstPublicationDate": "1989-05-01",
+            "doi": "10.7326/0003-4819-110-9-685",
+            "pmid": "2648927",
+            "journal": "Annals of internal medicine",
+            "authors": "Carithers RL, Herlong HF, Diehl AM, Shaw EW, Combes B, Fallon HJ, Maddrey WC."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/2648927/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "6a35cac67845595d636d16ddfafd928f3373118f432c1c484aac866cd108a0e5",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Crabb DW et al. Diagnosis and treatment of alcohol-associated liver diseases: 2019 practice guidance from the American Association for the Study of Liver Diseases. Hepatology, 2020.",
+          "url": "https://doi.org/10.1002/hep.30866",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Diagnosis and Treatment of Alcohol-Associated Liver Diseases: 2019 Practice Guidance From the American Association for the Study of Liver Diseases.",
+            "year": "2020",
+            "firstPublicationDate": "2020-01-01",
+            "doi": "10.1002/hep.30866",
+            "pmid": "31314133",
+            "journal": "Hepatology (Baltimore, Md.)",
+            "authors": "Crabb DW, Im GY, Szabo G, Mellinger JL, Lucey MR."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/31314133/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T13:19:19.748Z",
+        "total": 378,
+        "passed": 378,
+        "evidencePath": "reports/review-20261003/four-physiological-equation-source-oracles-final23-v2.json",
+        "scope": "Only explicitly listed physical/linear equation outputs. Other equations,protocols,thresholds,clinical interpretation,population suitability,professional translations and source rights are not approved.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "74966a34c36d2e92340f2359ba5911d67f1d826ed4b4101cc5404fdf6b0f6a47"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+    },
+    "limits": "A função original de 1978 foi estudada em hepatite alcoólica. A forma modificada local, com diferença de tempo de protrombina e corte 32, precisa corresponder à edição posterior de 1989. O total não substitui avaliação de contraindicações, infecção e alternativas diagnósticas antes de qualquer decisão terapêutica.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.981Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Fórmula modificada por Carithers 1989, diferença entre TP do paciente/controle e corte 32 exigem a fonte posterior. Não foram confirmados pelo resumo original de 1978."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/funcao-discriminante-de-maddrey/calculator.js",
+    "bytes": 4889,
+    "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "eb24bcd4f1fd9275a55d799be48bec627fcc7b9ae5edb27c34ae9e3ef0874b3d",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 378,
+      "sha256": "eb57f82b18a9a8b37287b4347016c8eed2a508c3c1d5764acd123f6792c3218c",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
