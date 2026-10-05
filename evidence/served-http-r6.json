@@ -1,0 +1,637 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "funcao-discriminante-de-maddrey",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/funcao-discriminante-de-maddrey/calculator.js",
+    "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d",
+    "bytes": 4889
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 3,
+    "replayed": 3,
+    "passed": 3,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "funcao-discriminante-de-maddrey",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+      "originalInput": {
+        "tp": 15,
+        "tpc": 12,
+        "bili": 5
+      },
+      "input": {
+        "tp": 15,
+        "tpc": 12,
+        "bili": 5
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "df": 18.8
+        },
+        "main": "18,8",
+        "level": "low",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "18,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 18.8
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "tp": 15,
+            "tpc": 12,
+            "bili": 5
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+          "startedAt": "2026-10-05T17:38:11.191Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "funcao-discriminante-de-maddrey",
+              "main": [
+                "18,8",
+                ""
+              ],
+              "label": "Função discriminante de Maddrey",
+              "raw": {
+                "df": 18.8
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "162c6d4c2a3b9d18c7b20e3602f5c626a732ae389ba295a7d3df33eccc8d5704",
+          "bytes": 169,
+          "elapsedMs": 4.5477000000246335
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+        "startedAt": "2026-10-05T17:38:11.191Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "funcao-discriminante-de-maddrey",
+            "main": [
+              "18,8",
+              ""
+            ],
+            "label": "Função discriminante de Maddrey",
+            "raw": {
+              "df": 18.8
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "162c6d4c2a3b9d18c7b20e3602f5c626a732ae389ba295a7d3df33eccc8d5704",
+        "bytes": 169,
+        "elapsedMs": 4.5477000000246335
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "18,8",
+            "obtained": "18,8",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.df",
+            "expected": 18.8,
+            "obtained": 18.8,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.df",
+            "expected": 18.8,
+            "obtained": 18.8,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "18,8",
+            "obtained": "18,8",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "funcao-discriminante-de-maddrey",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+      "originalInput": {
+        "tp": 17,
+        "tpc": 12,
+        "bili": 9
+      },
+      "input": {
+        "tp": 17,
+        "tpc": 12,
+        "bili": 9
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "df": 32
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "32,0",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 32
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "tp": 17,
+            "tpc": 12,
+            "bili": 9
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+          "startedAt": "2026-10-05T17:38:11.504Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "funcao-discriminante-de-maddrey",
+              "main": [
+                "32,0",
+                ""
+              ],
+              "label": "Função discriminante de Maddrey",
+              "raw": {
+                "df": 32
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "a34978fba6b9de94279a467de91ecd5e2bc4d9916dd4b2de1375140aa00a148c",
+          "bytes": 167,
+          "elapsedMs": 2.6304999999993015
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+        "startedAt": "2026-10-05T17:38:11.504Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "funcao-discriminante-de-maddrey",
+            "main": [
+              "32,0",
+              ""
+            ],
+            "label": "Função discriminante de Maddrey",
+            "raw": {
+              "df": 32
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "a34978fba6b9de94279a467de91ecd5e2bc4d9916dd4b2de1375140aa00a148c",
+        "bytes": 167,
+        "elapsedMs": 2.6304999999993015
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.df",
+            "expected": 32,
+            "obtained": 32,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.df",
+            "expected": 32,
+            "obtained": 32,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "32,0",
+            "obtained": "32,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "funcao-discriminante-de-maddrey",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+      "originalInput": {
+        "tp": 25,
+        "tpc": 12,
+        "bili": 10
+      },
+      "input": {
+        "tp": 25,
+        "tpc": 12,
+        "bili": 10
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "df": 69.8
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "recordedResult": {
+        "main": [
+          "69,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 69.8
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "tp": 25,
+            "tpc": 12,
+            "bili": 10
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+          "startedAt": "2026-10-05T17:38:11.818Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "funcao-discriminante-de-maddrey",
+              "main": [
+                "69,8",
+                ""
+              ],
+              "label": "Função discriminante de Maddrey",
+              "raw": {
+                "df": 69.8
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "96b1b0817ff42af72a5045bd5fc8350bbc1d7d3d238a4c5e1b14c8c77356e81d",
+          "bytes": 169,
+          "elapsedMs": 4.338799999997718
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/funcao-discriminante-de-maddrey/calculate",
+        "startedAt": "2026-10-05T17:38:11.818Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "funcao-discriminante-de-maddrey",
+            "main": [
+              "69,8",
+              ""
+            ],
+            "label": "Função discriminante de Maddrey",
+            "raw": {
+              "df": 69.8
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "96b1b0817ff42af72a5045bd5fc8350bbc1d7d3d238a4c5e1b14c8c77356e81d",
+        "bytes": 169,
+        "elapsedMs": 4.338799999997718
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.df",
+            "expected": 69.8,
+            "obtained": 69.8,
+            "tolerance": 0.001,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.df",
+            "expected": 69.8,
+            "obtained": 69.8,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "69,8",
+            "obtained": "69,8",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "",
+            "obtained": "",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}

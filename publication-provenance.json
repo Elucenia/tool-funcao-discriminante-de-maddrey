@@ -1,5 +1,5 @@
 {
-  "schema": "elucenia-native190-current-source-candidate-r1",
+  "schema": "elucenia-native-current-package-R6-HTTP-linked-r5",
   "id": "funcao-discriminante-de-maddrey",
   "repository": "Elucenia/tool-funcao-discriminante-de-maddrey",
   "remoteBase": {
@@ -180,7 +180,24 @@
   "sourceNodeParityPassed": true,
   "browserVmParityPassed": true,
   "actualBrowserDomVerified": false,
-  "currentActualR6HttpEvidence": "pending",
+  "currentActualR6HttpEvidence": {
+    "path": "evidence/served-http-r6.json",
+    "bytes": 19793,
+    "sha256": "5cb54ed27774aedfe1cc217bb1fefddfb1fa5ac294d26dcdd1a762f9274e2280",
+    "sourceReceipt": {
+      "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+      "bytes": 7105396,
+      "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+    },
+    "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+    "sourceCalculator": {
+      "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/funcao-discriminante-de-maddrey/calculator.js",
+      "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d",
+      "bytes": 4889
+    },
+    "cases": 3,
+    "status": "passed"
+  },
   "rights": {
     "ownCodeScope": "Current MIT adapter and original Apache standalone wrapper/support; exact original licences and notices coexist without rewriting",
     "sourceAdapter": {
@@ -302,5 +319,10 @@
   "externalPublicationReady": false,
   "publicationPerformed": false,
   "appWrites": false,
-  "deliveryWrites": false
+  "deliveryWrites": false,
+  "preparedFrom": {
+    "file": "reports/review-20261005-completion/native187-current-candidates-r2.json",
+    "bytes": 2785936,
+    "sha256": "2fe0448a9680b4a50b34235469d7cb36b3e8075ce0559d700f59442007cfb0f9"
+  }
 }
