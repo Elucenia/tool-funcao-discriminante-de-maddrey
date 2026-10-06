@@ -1,0 +1,387 @@
+{
+  "id": "funcao-discriminante-de-maddrey",
+  "implementationVersion": "funcao-discriminante-de-maddrey@native-2026-10-05+bca85b88541d",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: hepatite alcoólica não grave por este critério",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: hepatite alcoólica grave, considerar corticoide",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: hepatite alcoólica grave, considerar corticoide",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: non-severe alcoholic hepatitis by this criterion",
+            "locale": "en",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: severe alcoholic hepatitis, consider corticosteroid",
+            "locale": "en",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: severe alcoholic hepatitis, consider corticosteroid",
+            "locale": "en",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: hepatitis alcohólica no grave según este criterio",
+            "locale": "es",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: hepatitis alcohólica grave, considerar corticoide",
+            "locale": "es",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: hepatitis alcohólica grave, considerar corticoide",
+            "locale": "es",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32 : hépatite alcoolique non sévère selon ce critère",
+            "locale": "fr",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32 : hépatite alcoolique sévère, envisager un corticostéroïde",
+            "locale": "fr",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32 : hépatite alcoolique sévère, envisager un corticostéroïde",
+            "locale": "fr",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: nicht schwere alkoholische Hepatitis nach diesem Kriterium",
+            "locale": "de",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: schwere alkoholische Hepatitis, Kortikosteroid erwägen",
+            "locale": "de",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: schwere alkoholische Hepatitis, Kortikosteroid erwägen",
+            "locale": "de",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: epatite alcolica non grave secondo questo criterio",
+            "locale": "it",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: epatite alcolica grave, considerare corticoide",
+            "locale": "it",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: epatite alcolica grave, considerare corticoide",
+            "locale": "it",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: التهاب كبدي كحولي غير شديد وفقًا لهذا المعيار",
+            "locale": "ar",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: التهاب كبدي كحولي شديد، يُنظر في استخدام كورتيكوستيرويد",
+            "locale": "ar",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: التهاب كبدي كحولي شديد، يُنظر في استخدام كورتيكوستيرويد",
+            "locale": "ar",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32：按此标准为非重症酒精性肝炎",
+            "locale": "zh",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32：重症酒精性肝炎，考虑使用糖皮质激素",
+            "locale": "zh",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32：重症酒精性肝炎，考虑使用糖皮质激素",
+            "locale": "zh",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: この基準では重症ではないアルコール性肝炎",
+            "locale": "ja",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: 重症アルコール性肝炎、コルチコステロイドを考慮",
+            "locale": "ja",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: 重症アルコール性肝炎、コルチコステロイドを考慮",
+            "locale": "ja",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD < 32: इस मानदंड के अनुसार गैर-गंभीर अल्कोहलिक हेपेटाइटिस",
+            "locale": "hi",
+            "template": "documented-authored-b2479b534632d0dbee42"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: गंभीर अल्कोहलिक हेपेटाइटिस, कॉर्टिकोस्टेरॉयड पर विचार करें",
+            "locale": "hi",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "FD ≥ 32: गंभीर अल्कोहलिक हेपेटाइटिस, कॉर्टिकोस्टेरॉयड पर विचार करें",
+            "locale": "hi",
+            "template": "documented-authored-82744647a15d74edd678"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

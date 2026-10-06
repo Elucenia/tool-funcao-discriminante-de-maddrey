@@ -1,0 +1,173 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "funcao-discriminante-de-maddrey",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "ec045216f669ea84945531c6c03d48c0c45ebb4e",
+    "oldEngineSha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d",
+    "currentEngineSha256": "bca85b88541d5aea7aca7730b89fec927929633905e73f13b76616bf5eb5ab7b"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "TP 15 s, controle 12 s, bilirrubina 5: FD 18,8 (não grave)",
+      "input": {
+        "tp": 15,
+        "tpc": 12,
+        "bili": 5
+      },
+      "publicOutput": {
+        "id": "funcao-discriminante-de-maddrey",
+        "main": [
+          "18,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 18.8
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "df": 18.8
+        },
+        "main": "18,8",
+        "level": "low",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "18,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "level": "low",
+        "verdict": "FD &lt; 32: hepatite alcoólica não grave por este critério",
+        "note": "",
+        "raw": {
+          "df": 18.8
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "TP 17 s, controle 12 s, bilirrubina 9: FD 32,0 (limite, grave)",
+      "input": {
+        "tp": 17,
+        "tpc": 12,
+        "bili": 9
+      },
+      "publicOutput": {
+        "id": "funcao-discriminante-de-maddrey",
+        "main": [
+          "32,0",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 32
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "df": 32
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "32,0",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "level": "high",
+        "verdict": "FD ≥ 32: hepatite alcoólica grave, considerar corticoide",
+        "note": "",
+        "raw": {
+          "df": 32
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "TP 25 s, controle 12 s, bilirrubina 10: FD 69,8 (grave)",
+      "input": {
+        "tp": 25,
+        "tpc": 12,
+        "bili": 10
+      },
+      "publicOutput": {
+        "id": "funcao-discriminante-de-maddrey",
+        "main": [
+          "69,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "raw": {
+          "df": 69.8
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "df": 69.8
+        },
+        "level": "high",
+        "tol": 0.001
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "69,8",
+          ""
+        ],
+        "label": "Função discriminante de Maddrey",
+        "level": "high",
+        "verdict": "FD ≥ 32: hepatite alcoólica grave, considerar corticoide",
+        "note": "",
+        "raw": {
+          "df": 69.8
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

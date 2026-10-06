@@ -163,7 +163,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Modified Maddrey/Carithers 1989:4,6×(TPpaciente−TPcontrole)+bilirrubina; sem equação original TPabsoluto 1978",
-    "implementationVersion": "funcao-discriminante-de-maddrey@native-2026-10-03+7eda95d4925b",
+    "implementationVersion": "funcao-discriminante-de-maddrey@native-2026-10-05+bca85b88541d",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/352788/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -290,7 +290,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+      "implementationHash": "bca85b88541d5aea7aca7730b89fec927929633905e73f13b76616bf5eb5ab7b",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "funcao-discriminante-de-maddrey@native-2026-10-03+7eda95d4925b",
+          "previousImplementationHash": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d",
+          "implementationHash": "bca85b88541d5aea7aca7730b89fec927929633905e73f13b76616bf5eb5ab7b",
+          "scientificBodySha256": "c3adcc0446be8015b84d10e8bfd11a559abd54e38de38c5ab075bcf471687a3d",
+          "metadataContractHash": "a4cb705411a29287fc52cb0d5e4e43c7d623d10735baaea2e705939aa6b52c8c",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "A função original de 1978 foi estudada em hepatite alcoólica. A forma modificada local, com diferença de tempo de protrombina e corte 32, precisa corresponder à edição posterior de 1989. O total não substitui avaliação de contraindicações, infecção e alternativas diagnósticas antes de qualquer decisão terapêutica.",
     "sourceLimitEvidence": {
@@ -309,15 +337,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/funcao-discriminante-de-maddrey/calculator.js",
-    "bytes": 4889,
-    "sha256": "7eda95d4925bd14689a4cb633f3865d0edbd9eee1e2aa710d5d28bd536b85e1d"
+    "bytes": 5094,
+    "sha256": "bca85b88541d5aea7aca7730b89fec927929633905e73f13b76616bf5eb5ab7b"
   },
-  "sourceToolSha256": "eb24bcd4f1fd9275a55d799be48bec627fcc7b9ae5edb27c34ae9e3ef0874b3d",
+  "sourceToolSha256": "5a0e9d0aef6a252ba182efb0cd7064f2f17e3ff6e69d1640df351fb5bf9d33e0",
   "omittedFullReferenceBanks": [
     {
       "rows": 378,
       "sha256": "eb57f82b18a9a8b37287b4347016c8eed2a508c3c1d5764acd123f6792c3218c",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
